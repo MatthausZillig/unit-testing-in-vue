@@ -1,29 +1,27 @@
 <template>
   <div>
-    <span>{{ result }}</span>
-    <button @click="getFactorial">Get Factorial</button>
+    <span>{{ number }}</span>
+    <button @click="increase">+</button>
+    <button @click="decrease">-</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'FactorialComponent',
-  props: {
-    number: {
-      type: Number,
-      default: 0,
-    },
-  },
   data() {
     return {
-      result: 1,
+      number: 0,
     }
   },
   methods: {
-    getFactorial() {
-      // eslint-disable-next-line vue/no-mutating-props
-      while (this.number > 0) this.result *= this.number--
-      return this.result
+    increase() {
+      this.number++
+    },
+    decrease() {
+      if (this.number > 0) {
+        this.number--
+      }
     },
   },
 }
