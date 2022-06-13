@@ -1,14 +1,14 @@
 <template>
-  <factorial-component :number="13" />
+  <counter-component :number="13" />
 </template>
 
 <script lang="ts">
-import FactorialComponent from '~/components/Factorial.vue'
+import CounterComponent from '~/components/Counter.vue'
 
 export default {
   name: 'IndexPage',
   components: {
-    FactorialComponent,
+    CounterComponent,
   },
 }
 </script>

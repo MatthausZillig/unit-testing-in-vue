@@ -1,14 +1,14 @@
 <template>
   <div>
     <span>{{ number }}</span>
-    <button @click="increase">+</button>
-    <button @click="decrease">-</button>
+    <button data-testid="increase" @click="increase">+</button>
+    <button data-testid="decrease" @click="decrease">-</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'FactorialComponent',
+  name: 'CounterComponent',
   data() {
     return {
       number: 0,
